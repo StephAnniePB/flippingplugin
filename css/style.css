@@ -1,0 +1,118 @@
+html {
+  height: 100%;
+}
+body {
+  background: black;
+  margin: 0;
+  width: 100%;
+  height: 162%;
+  font-family: 'Amaranth', sans-serif;
+}
+header{
+  color: #29b000;
+
+}
+
+h1 {
+  text-align: center;
+  color: #a90091;
+  
+}
+p{
+text-align: left;
+color:#29b000;
+font-size: 18px;
+}
+
+.headshot{
+  width: 50%; 
+  float: left;
+
+}
+
+.scene {
+    width: 45%;
+    height: 90%;
+    margin: 5% 5% 5% 50%;
+  
+  perspective: 1000px;
+}
+
+.book {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  
+  transform-style: preserve-3d;
+}
+
+.page {
+  background-size: 100% 100%;
+  cursor: pointer;
+  position: absolute;
+  color: black;
+  width: 100%;
+  height: 100%;
+
+  transition: 1.5s transform;
+  transform-style: preserve-3d;  
+  transform-origin: left center;
+}
+.front,
+.back {
+  background-size: 100% 100%;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  padding: 10% 5% 5%;
+  box-sizing: border-box;
+  backface-visibility: hidden;
+}
+.front {
+  background-image: url(../img/paper.jpg);
+}
+.back {
+  background-image: url(../img/paper_flipped.jpg);
+}
+
+.back {
+  transform: rotateY(180deg);
+}
+
+.page.active {
+  z-index: 1;
+}
+.page.flipped {
+  transform: rotateY(-180deg);
+}
+.page.flipped:last-of-type {
+  z-index: 1;
+}
+
+p {
+  margin: 0 0 0.1em;
+  text-indent: 1em;
+}
+
+#pagetwo h1{
+  width: 50%;
+  float: right;
+}
+
+#pagetwo p {
+  clear: both;
+}
+
+footer {}
+
+
+/* iPads (portrait) ----------- */
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px) 
+and (orientation : portrait) {
+  .scene {
+    width: 90%;
+    height: 90%;
+    margin: 5%;
+}
