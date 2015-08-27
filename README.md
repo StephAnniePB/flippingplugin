@@ -18,4 +18,7 @@ This next piece of code is very important it contains the div class, article cla
     <article class="book">
       <section class="page active">
         <div class="front">
-The page active section class is letting the "page" be responsive to your click. The div class notes where you are and 
+The page active section class is letting the "page" be responsive to your click. The div class notes where you are and helps keep track of each rotation from front to back.
+Also, if you put links inside the book, they must be on the "back" page. 
+The background was the trickist part. We used an open source background and lightened it, then we flipped it over.
+I hope this information helps you and if you have any questions feel free to send an email to the address in my profile.
